@@ -2,27 +2,12 @@ import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity, ScrollVi
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
 import Selector from './selector'
+import {CircuitsJsonTypes} from '../types/types'
+import {imageList} from '../assets/imagesRequire'
+const CircuitsJson = require('../assets/circuits.json')
 
 type CircuitsProps = NativeStackScreenProps<RootStackParamList, 'Circuits'>
 
-const CircuitsArray = [
-    {
-        image: require('../assets/img/leToutParis.jpg'),
-        name: 'Le tout Paris',
-    },
-    {
-        image: require('../assets/img/cancun.jpg'),
-        name:  'Découvrez Cancún',
-    },
-    {
-        image: require('../assets/img/grece.jpg'),
-        name:  'Les merveilles de la Grèce',
-    },
-    {
-        image: require('../assets/img/route66.jpg'),
-        name:  'Le circuit 66',
-    },
-]
 
 export default function Circuits({route, navigation}: CircuitsProps)  {
     return (
@@ -32,12 +17,14 @@ export default function Circuits({route, navigation}: CircuitsProps)  {
         </View>
         <Text style={styles.introduction}>Découvrez ici les différents circuits que nous proposons dans le cadre des voyages Sunaway</Text>
         <Selector></Selector>
-        <ScrollView style={styles.scroll} contentContainerStyle={{alignItems: 'center',}}>
+        <ScrollView style={styles.scroll} contentContainerStyle={{alignItems: 'center'}}>
             {
-            CircuitsArray.map(e => 
-                <View>
+            CircuitsJson.map((e:CircuitsJsonTypes, key: number) => 
+                <View style={styles.circuitContainer} key={key}>
                     <View style={styles.imageView}>
-                        <Image source={e.image} style={styles.image}></Image>
+                        <TouchableOpacity onPress={() => navigation.navigate('CircuitDetails', {circuitNumber: key})}>
+                            <Image source={imageList[key].mainImage} style={styles.image}></Image>
+                        </TouchableOpacity>
                     </View>
                     <Text style={styles.circuitName}>{e.name}</Text>
                 </View>
@@ -47,11 +34,6 @@ export default function Circuits({route, navigation}: CircuitsProps)  {
     </View>
     );
   }
-
-
-
-
-
 
 
   const styles = StyleSheet.create({
@@ -75,6 +57,11 @@ export default function Circuits({route, navigation}: CircuitsProps)  {
         fontWeight: '500',
         color: '#FFFFFF',
     },
+    circuitContainer: {
+        borderBottomWidth: 0.2,
+        paddingBottom: 32,
+        borderBottomColor: '#FFFFFF',
+    },
     image: {
         width: 290,
         height: 290,
@@ -84,7 +71,7 @@ export default function Circuits({route, navigation}: CircuitsProps)  {
     imageView: {
         overflow: 'hidden',
         marginBottom: 24,
-        marginTop: 47,
+        marginTop: 40,
         flexDirection: 'row',
     },
     circuitName: {
