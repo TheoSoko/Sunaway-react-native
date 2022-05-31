@@ -6,24 +6,36 @@ const CircuitsJson = require('../assets/circuits.json')
 
 type CircuitDetailsProps = NativeStackScreenProps<RootStackParamList, 'CircuitDetails'>
 
+function imageLoop(machin:Array<number>) {
+    let componentArray = []
+    for (let i = 1; i < machin.length; i++){
+        componentArray.push(<View style={styles.imageView} key={i}><Image source={machin[i]} style={styles.image}></Image></View>)
+    }
+    return componentArray
+}
+
+
+//Composant
 export default function CircuitDetails({route, navigation}: CircuitDetailsProps)  {
     const circuitNumber = route.params.circuitNumber
-
+    let currentImagesArray = imageList[circuitNumber].images
     return (
     <View style={styles.container}>
         <View style={styles.titleView}>
             <Text style={styles.title}>Nos circuits</Text>
         </View>
-        <ScrollView contentContainerStyle={{alignItems: 'center'}}>
+        <ScrollView contentContainerStyle={{alignItems: 'center', paddingBottom: 25}}>
             <Text style={styles.circuitName}>{CircuitsJson[circuitNumber].name}</Text>
             <Text style={styles.introduction}>{CircuitsJson[circuitNumber].introText}</Text>
             <View style={styles.imageView}>
-                <Image source={imageList[circuitNumber].images[0]} style={styles.image}></Image>
+                <Image source={currentImagesArray[0]} style={styles.image}></Image>
             </View>
             <Text style={styles.introduction}>
                 Blablabla, blabla blabla. Oui oui non non oui peut-être, blablabla, blabla blablabla. Bien sur, évidemment.
             </Text>
-
+            {
+                imageLoop(currentImagesArray)
+            }
         </ScrollView>
     </View>
     );

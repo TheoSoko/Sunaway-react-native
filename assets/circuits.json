@@ -3,39 +3,24 @@
         "mainImage": "../assets/img/paris.jpg",
         "name": "Le tout Paris",
         "shortName": "paris",
-        "introText": "Vous avez toujours rêvé de découvrir Paris dans son ensemble, de parcourir la capitale en vélib ou en trottinette électrique? Vous aimer les odeurs de la ville, l’air urbain? Ce circuit est peut-être fait pour vous.",
-        "images": [
-            "../assets/img/parisSecondary.jpg",
-            "../assets/img/parisMetro.jpg",
-            "../assets/img/parisStreet.jpg",
-            "../assets/img/parisTrash.jpg"
-        ]
+        "introText": "Vous avez toujours rêvé de découvrir Paris dans son ensemble, de parcourir la capitale en vélib ou en trottinette électrique? Vous aimer les odeurs de la ville, l’air urbain? Ce circuit est peut-être fait pour vous."
     },
     {
         "mainImage": "../assets/img/cancun.jpg",
         "name": "Découvrez Cancún",
         "shortName": "cancun",
-        "introText": "Le Club Med Cancùn a fait peau neuve ! Entièrement réaménagé, ce Resort tout compris installé à la pointe de la fameuse Riviera Maya est idéal pour les familles. Découvrez pas moins de trois plages de sable blanc, ainsi que la deuxième plus grande barrière de corail au monde. Ce superbe Resort propose aussi un large éventail de sports nautiques et terrestres, ainsi que des activités pour toute la famille.",
-        "images": [
-
-        ]
+        "introText": "Le Club Med Cancùn a fait peau neuve ! Entièrement réaménagé, ce Resort tout compris installé à la pointe de la fameuse Riviera Maya est idéal pour les familles. Découvrez pas moins de trois plages de sable blanc, ainsi que la deuxième plus grande barrière de corail au monde. Ce superbe Resort propose aussi un large éventail de sports nautiques et terrestres, ainsi que des activités pour toute la famille."
     },
     {
         "mainImage": "../assets/img/grece.jpg",
         "name": "Les merveilles de la grece",
         "shortName": "grece",
-        "introText": "Confort et convivialité sont les maîtres-mots de ce ravissant club en Crète ! Ses chambres spacieuses sont idéales pour les familles, ses nombreuses installations de loisirs et la magnifique vue sur la mer de ses terrasses. De belles excursions vous seront proposées, et vous pourrez vous rendre aisément à pied (ou avec la navette de l’hôtel) à la plage ou au village très animé d’Hersonissos.",
-        "images": [
-            
-        ]
+        "introText": "Confort et convivialité sont les maîtres-mots de ce ravissant club en Crète ! Ses chambres spacieuses sont idéales pour les familles, ses nombreuses installations de loisirs et la magnifique vue sur la mer de ses terrasses. De belles excursions vous seront proposées, et vous pourrez vous rendre aisément à pied (ou avec la navette de l’hôtel) à la plage ou au village très animé d’Hersonissos."
     },
     {
         "mainImage": "../assets/img/route66.jpg",
         "name": "Le circuit 66",
         "shortName": "route66",
-        "introText": "La mythique route 66 est devenue le symbole de toute une génération d’Américains épris de liberté et de voyages (motorisés). Elle fut en effet l’icône de la nouvelle Amérique, unie et aventurière. Construite afin de relier l’est à l’ouest  alors très peu connu, la Road 66 a encouragé des milliers d’Américains à prendre la route pour explorer leur pays, et elle est devenue une légende grâce aux nombreux artistes qui l’on célébrée.  Aujourd’hui, la route n’est plus fréquentée que pour le plaisir de découvrir ces succulentes bulles de nostalgie. Ambiance 50’s et 60’s assurée. Prêt à prendre la route ?",
-        "images": [
-            
-        ]
+        "introText": "La mythique route 66 est devenue le symbole de toute une génération d’Américains épris de liberté et de voyages (motorisés). Elle fut en effet l’icône de la nouvelle Amérique, unie et aventurière. Construite afin de relier l’est à l’ouest  alors très peu connu, la Road 66 a encouragé des milliers d’Américains à prendre la route pour explorer leur pays, et elle est devenue une légende grâce aux nombreux artistes qui l’on célébrée.  Aujourd’hui, la route n’est plus fréquentée que pour le plaisir de découvrir ces succulentes bulles de nostalgie. Ambiance 50’s et 60’s assurée. Prêt à prendre la route ?"
     }
 ]

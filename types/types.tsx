@@ -4,6 +4,7 @@ export type RootStackParamList = {
     Activities: {activityNumber: number},
     Circuits: undefined,
     CircuitDetails: {circuitNumber: number},
+    Contact: undefined,
 }
 
 export type CircuitsJsonTypes = {

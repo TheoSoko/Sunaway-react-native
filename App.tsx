@@ -9,7 +9,7 @@ import Circuit1 from './components/CircuitDetails'
 import { RootStackParamList } from './types/types';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import  {MaterialIcons}  from '@expo/vector-icons'; 
-
+import Contact from './components/Contact'
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const BottomTab = createBottomTabNavigator<RootStackParamList>();
@@ -21,6 +21,7 @@ function TabScreen(){
       <BottomTab.Screen name="Home" component={Home} options={{ headerShown: false, tabBarIcon: ({ focused, size, color}) => focused ? <Ionicons name='home' size={size} color={color}></Ionicons> : <Ionicons name='home' size={size} color={'black'}></Ionicons> }}/>
       <BottomTab.Screen name="Activities" component={Activities} initialParams={{ activityNumber: 0 }} options={{ headerShown: false, tabBarIcon: ({ focused, size, color}) => focused ? <Ionicons name='sunny' size={size} color={color}></Ionicons> : <Ionicons name='sunny' size={size} color={'black'}></Ionicons> }} />
       <BottomTab.Screen name="Circuits" component={Circuits} options={{ headerShown: false, tabBarIcon: ({ focused, size, color}) => focused ? <MaterialIcons name='card-travel' size={size} color={color}></MaterialIcons> : <MaterialIcons name='card-travel' size={size} color={'black'}></MaterialIcons> }}></BottomTab.Screen>
+      <BottomTab.Screen name="Contact" component={Contact} options={{ headerShown: false, tabBarIcon: ({ focused, size, color}) => focused ? <MaterialIcons name='mail' size={size} color={color}></MaterialIcons> : <MaterialIcons name='mail' size={size} color={'black'}></MaterialIcons> }}></BottomTab.Screen>
     </BottomTab.Navigator>
   )
 }
